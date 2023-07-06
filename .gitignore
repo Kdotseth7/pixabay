@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Files to be ignored
+.idea/
+.vscode/
+.DS_Store

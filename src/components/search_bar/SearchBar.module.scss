@@ -1,0 +1,10 @@
+@use '../../static/scss/index' as theme;
+
+.searchbar {
+    justify-content: center;
+    padding: 2vh;
+    margin-bottom: 2vh;
+    .textfield {
+        background-color: white;
+    }
+}

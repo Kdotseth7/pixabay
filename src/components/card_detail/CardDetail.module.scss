@@ -1,0 +1,16 @@
+@use '../../static/scss/index' as theme;
+
+.container {
+    justify-content: center;
+    align-items: center;
+    .paper {
+        margin: 1vh;
+        padding: 1vh;
+        border-radius: 1vh;
+    }
+    .image {
+        width: 100%;
+        object-fit: cover;
+        border: black 1px solid;
+    }
+}

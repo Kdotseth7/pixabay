@@ -1,0 +1,12 @@
+@use '../../static/scss/index' as theme;
+
+.card {
+  padding: 2vh;
+  margin: 5vh;
+  .actionArea {
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+}
