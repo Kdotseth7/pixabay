@@ -5,7 +5,7 @@ import header from "./Header.module.scss";
 const Header = () => {
     return (
         <AppBar position="sticky" className={header.appBar}>
-            <Link to="/" className={header.header}>
+            <Link to="/pixabay" className={header.header}>
                 <Typography variant="h3" component="h1" fontFamily="Roboto">
                     Pixabay Image Search
                 </Typography>
