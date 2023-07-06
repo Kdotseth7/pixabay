@@ -19,18 +19,24 @@ const Main = () => {
     const url = "https://pixabay.com/api/?key=" + api_key + "&q=" + confirmSearch + "&image_type=photo&pretty=true"
 
     useEffect(() => {
-        fetch(url)
-            .then(response => response.json())
-            .then(imageList => {setImages(imageList["hits"])
-            })
-            .catch(error => console.log(error))
+        const fetchData = async () => {
+            try {
+                const response = await fetch(url);
+                const imageList = await response.json();
+                setImages(imageList["hits"]);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        fetchData();
     }, [confirmSearch, url]);
 
     return (
     <BrowserRouter>
         <Header />
         <Routes>
-            <Route path="/" element={<CardList images={images} confirmSearch={confirmSearch} setSearch={setSearch} />} />
+            <Route path="/pixabay" element={<CardList images={images} confirmSearch={confirmSearch} setSearch={setSearch} />} />
             <Route path="/image-details/:id" element={<CardDetail images={images} />} />
         </Routes>
         <Footer />

@@ -4,6 +4,15 @@ import CardComponent from "../card_component/CardComponent";
 import SearchBar from "../search_bar/SearchBar";
 
 const CardList = (props) => {
+    if (!props.images) {
+        return (
+            <Grid container justifyContent="center">
+                <Grid item>
+                    <SearchBar confirmSearch={props.confirmSearch} setSearch={props.setSearch} />
+                </Grid>
+            </Grid>
+        );
+    }
     return (
         <Grid container justifyContent="center">
             <Grid item>
